@@ -13,6 +13,7 @@ app.get("/", (req, res) =>{
 
 
 const PORT = process.env.PORT
+
 app.listen(PORT, () =>{
     console.log(`✅ Database connected successfully and Server running on PORT:${PORT}`);
     
