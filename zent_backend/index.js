@@ -20,9 +20,9 @@ const PORT = process.env.PORT || 7800
 db.sync({force: false, alter: false})
 .then(async () => {
 app.listen(PORT, () =>{
-    console.log(`✅ Database connected successfully and Server running on PORT:${PORT}`);
-    
+    console.log(`✅ Database connected successfully and Server running on PORT:${PORT}`);  
 })
+
 })
 .catch((e)=>{
     console.log(`❌ Database connection failed:`, e);
