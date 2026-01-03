@@ -4,6 +4,9 @@ require('dotenv').config();
 
 const app = express(); 
 
+const db = require('./config/db')
+
+
 app.get("/", (req, res) =>{
     res.status(200).json({
         "message": "Welcome to Zent",
@@ -12,7 +15,7 @@ app.get("/", (req, res) =>{
 })
 
 
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 7800
 
 app.listen(PORT, () =>{
     console.log(`✅ Database connected successfully and Server running on PORT:${PORT}`);
